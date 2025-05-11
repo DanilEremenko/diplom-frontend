@@ -1,0 +1,49 @@
+.sidebar-menu {
+    position: absolute;
+    width: 350px;
+    height: 220px;
+    top: 212px;
+    left: 32px;
+    background: transparent;
+}
+
+/* Переопределяем стили Ant Design Menu */
+.ant-menu {
+    background: transparent !important;
+    border: 0 !important;
+}
+
+.menu-item-custom {
+    position: relative;
+    width: 290px !important;
+    height: 40px !important;
+    margin-left: 30px !important;
+    margin-top: 5px !important;
+    font-size: 14px !important;
+    color: #96A6BA !important; /* Неактивный пункт — серый */
+    background: transparent !important;
+    border: 0 !important;
+    padding-left: 16px !important;
+    line-height: 40px !important;
+}
+
+.menu-item-custom:hover {
+    color: #56B8FF !important;
+    background: transparent !important;
+}
+
+.menu-item-custom.ant-menu-item-selected {
+    color: #56B8FF !important; /* Активный пункт — синий */
+    background: #FFFFFF !important; /* Белый фон для активного пункта */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1) !important; /* Небольшая тень */
+}
+
+.menu-item-custom.ant-menu-item-selected::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 40px;
+    background: #56B8FF; /* Синяя полоска слева */
+}

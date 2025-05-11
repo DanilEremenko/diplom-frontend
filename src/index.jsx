@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Registration from './pages/Registration';
-import './styles/Registration.css';
+import App from './App';
+import './styles/Registration.module.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <Registration />
+        <App />
     </React.StrictMode>
 );
