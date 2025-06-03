@@ -1,4 +1,4 @@
-/* Модальное окно профиля */
+
 .profile-modal {
     position: fixed;
     width: 1180px;
@@ -13,7 +13,6 @@
     z-index: 1000;
 }
 
-/* Аватар */
 .profile-avatar-container {
     position: relative;
 }
@@ -29,7 +28,6 @@
     display: block;
 }
 
-/* Кнопка Изменить фото */
 .change-photo-button {
     position: absolute;
     width: 180px;
@@ -46,7 +44,6 @@
     transition: all 300ms ease-out;
 }
 
-/* Контейнер для полей и лейблов */
 .profile-field-container {
     position: absolute;
 }
@@ -62,7 +59,7 @@
 }
 
 .profile-field-container.name {
-    top: 188px; /* Сдвинули вниз из-за лейбла */
+    top: 188px;
     left: 400px;
 }
 
@@ -72,11 +69,10 @@
 }
 
 .profile-field-container.patronymic {
-    top: 284px; /* Сдвинули вниз из-за лейбла */
+    top: 284px;
     left: 400px;
 }
 
-/* Лейблы для полей */
 .profile-field-label {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
@@ -86,10 +82,9 @@
 }
 
 .required-star {
-    color: #FF4D4F; /* Красная звёздочка для обязательных полей */
+    color: #FF4D4F;
 }
 
-/* Поля ввода */
 .profile-field {
     width: 279px;
     height: 36px;
@@ -100,12 +95,12 @@
     color: #2E2E2E;
 }
 
-/* Кнопка Сменить пароль */
+
 .change-password-button {
     position: absolute;
     width: 180px;
     height: 32px;
-    top: 304px; /* Сдвинули вниз из-за лейбла */
+    top: 304px;
     left: 700px;
     border-radius: 50px;
     border: 1.5px solid #4EACE8;
@@ -117,12 +112,12 @@
     transition: all 300ms ease-out;
 }
 
-/* Опыт работы */
+
 .work-experience-container {
     position: absolute;
     width: 579px;
     height: 265px;
-    top: 380px; /* Сдвинули вниз из-за лейблов выше */
+    top: 380px;
     left: 400px;
 }
 
@@ -153,12 +148,12 @@
     padding: 8px 16px;
 }
 
-/* Кнопка Сохранить */
+
 .save-button {
     position: absolute;
     width: 180px;
     height: 32px;
-    top: 645px; /* Сдвинули вниз из-за лейблов */
+    top: 645px;
     left: 400px;
     border-radius: 50px;
     border: 1.5px solid #4EACE8;
@@ -169,7 +164,6 @@
     background: transparent;
 }
 
-/* Попап изменения фото */
 .change-photo-popup {
     position: fixed;
     width: 456px;

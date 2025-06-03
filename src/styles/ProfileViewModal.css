@@ -1,4 +1,4 @@
-/* Модальное окно профиля (просмотр) */
+
 .profile-modal {
     position: fixed;
     width: 1180px;
@@ -13,7 +13,7 @@
     z-index: 1000;
 }
 
-/* Аватар */
+
 .profile-avatar-container {
     position: relative;
 }
@@ -29,7 +29,7 @@
     display: block;
 }
 
-/* Контейнеры полей */
+
 .profile-field-container {
     position: absolute;
 }
@@ -59,7 +59,7 @@
     left: 400px;
 }
 
-/* Опыт работы */
+
 .work-experience-container {
     position: absolute;
     width: 450px;
@@ -91,7 +91,6 @@
     resize: none;
 }
 
-/* Секция ролей */
 .profile-roles-container {
     position: absolute;
     top: 500px;
@@ -107,7 +106,6 @@
     display: block;
 }
 
-/* Обратная связь для менеджера */
 .feedback-section {
     position: absolute;
     top: 550px;
@@ -179,7 +177,7 @@
 
 .feedback-section {
     position: absolute;
-    top: 630px; /* чуть ниже блока ролей */
+    top: 630px;
     left: 400px;
     width: 580px;
     font-family: 'Roboto', sans-serif;

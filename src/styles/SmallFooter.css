@@ -1,8 +1,8 @@
 .small-footer {
     height: 40px;
-    padding: 0; /* Убраны отступы, чтобы футер занимал всю ширину */
+    padding: 0;
     background-color: transparent;
-    width: 100%; /* Явно задаём ширину 100% */
+    width: 100%;
 }
 
 .footer-left {
@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 12px; /* Отступ слева для текста, чтобы не прилипал к краю */
+    padding-left: 12px;
 }
 
 .footer-year,
@@ -27,7 +27,7 @@
     height: 26px;
     object-fit: contain;
     filter: brightness(0) saturate(100%) invert(60%) sepia(4%) saturate(508%) hue-rotate(176deg) brightness(93%) contrast(86%);
-    margin-right: 12px; /* Отступ справа для логотипа */
+    margin-right: 12px;
 }
 
 @media (min-width: 1600px) {

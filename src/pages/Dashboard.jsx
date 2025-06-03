@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import SidebarMenu from '../components/SidebarMenu';
 import MethodologistDashboard from '../components/MethodologistDashboard';
 import MentorDashboard from '../components/MentorDashboard';
-import ManagerDashboard from "../components/ManagerDashboard"; // Import the new component
+import ManagerDashboard from "../components/ManagerDashboard";
 
 const { Content, Footer } = Layout;
 
@@ -17,7 +17,7 @@ const Dashboard = () => {
 
     const handleRoleChange = useCallback((newRole) => {
         setRole(newRole);
-        setActiveMenuKey('1'); // Reset menu on role change
+        setActiveMenuKey('1');
     }, []);
 
     const handleMenuSelect = ({ key }) => {
@@ -75,8 +75,8 @@ const Dashboard = () => {
 
                 <Footer className="dashboard-footer">
                     <div className="footer-container">
-                        <p className="footer-text">2024 © Work Solutions</p>
-                        <p className="footer-text">Политика конфиденциальности</p>
+                        <p className="footer-text">2025 © Work Solutions</p>
+                        <p className="footer-text" href="/agreement.pdf">Политика конфиденциальности</p>
                         <img src={wsLogo} alt="Logo" className="footer-logo" />
                     </div>
                 </Footer>

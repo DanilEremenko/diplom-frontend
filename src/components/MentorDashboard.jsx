@@ -6,7 +6,7 @@ import '../styles/MentorDashboard.css';
 const { Text } = Typography;
 
 const MentorDashboard = () => {
-    const [activeTab, setActiveTab] = useState('mentees'); // Default to "Мои подопечные"
+    const [activeTab, setActiveTab] = useState('mentees');
     const [specialists, setSpecialists] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [totalItems, setTotalItems] = useState(0);
@@ -21,7 +21,7 @@ const MentorDashboard = () => {
                     sortBy: 'lastname',
                     order: 'asc',
                     page,
-                    count: 4, // Ensure 4 records per page
+                    count: 4,
                 };
 
                 if (activeTab === 'skillCheck') {
@@ -33,7 +33,7 @@ const MentorDashboard = () => {
                 }
 
                 const response = await axiosClient.get('/users/', { params });
-                console.log('API Response:', response.data); // Debug API response
+                console.log('API Response:', response.data);
                 const fetchedUsers = response.data.items || [];
                 const filteredSpecialists = fetchedUsers.filter((user) =>
                     user.role.includes('SPECIALIST')
@@ -61,7 +61,7 @@ const MentorDashboard = () => {
 
     const handleTabChange = (tab) => {
         setActiveTab(tab);
-        setCurrentPage(1); // Reset to first page on tab change
+        setCurrentPage(1);
     };
 
     const columns = [
@@ -90,7 +90,6 @@ const MentorDashboard = () => {
         <div className="mentor-content">
             <h1 className="mentor-title">Специалисты на проверку и калибровку навыков</h1>
 
-            {/* Tabs */}
             <div className="mentor-tabs">
         <span
             className={`tab-item ${activeTab === 'skillCheck' ? 'active' : 'inactive'}`}
@@ -112,7 +111,6 @@ const MentorDashboard = () => {
         </span>
             </div>
 
-            {/* Table */}
             <div className="mentor-table-container">
                 <Table
                     className="mentor-table"

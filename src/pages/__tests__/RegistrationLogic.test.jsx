@@ -2,7 +2,6 @@ import axiosClient from '../../api/AxiosClient';
 
 jest.mock('../../api/AxiosClient');
 
-// Логика регистрации, которую мы тестируем
 const registerUser = async (values, onSuccess, onError) => {
     const requestData = {
         email: values.email,
@@ -25,11 +24,10 @@ const registerUser = async (values, onSuccess, onError) => {
     }
 };
 
-// Тесты
 describe('registerUser', () => {
     const mockValues = {
         email: 'test@example.com',
-        password: 'Qwerty123',
+        password: 'Qwerty123**!',
         firstName: 'Иван',
         lastName: 'Иванов',
         middleName: '',
@@ -37,7 +35,7 @@ describe('registerUser', () => {
         inn: '1234567890',
     };
 
-    it('вызывает onSuccess при успешной регистрации', async () => {
+    it('onSuccess', async () => {
         axiosClient.post.mockResolvedValueOnce({});
 
         const onSuccess = jest.fn();
@@ -47,7 +45,7 @@ describe('registerUser', () => {
 
         expect(axiosClient.post).toHaveBeenCalledWith('/auth/register/', {
             email: 'test@example.com',
-            password: 'Qwerty123',
+            password: 'Qwerty123**!',
             firstName: 'Иван',
             lastName: 'Иванов',
             middleName: '',
@@ -61,7 +59,7 @@ describe('registerUser', () => {
         expect(onError).not.toHaveBeenCalled();
     });
 
-    it('вызывает onError с сообщением при ошибке регистрации', async () => {
+    it('onError с сообщением при ошибке регистрации', async () => {
         axiosClient.post.mockRejectedValueOnce({
             response: {
                 data: {

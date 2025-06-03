@@ -32,7 +32,7 @@ const resetPassword = async ({ login, secret, newPassword }, onSuccess, onError)
 describe('Password Recovery Flow', () => {
 
     describe('requestPasswordRecovery', () => {
-        it('успешно отправляет запрос на восстановление пароля', async () => {
+        it('отправляет запрос на восстановление пароля', async () => {
             axios.post.mockResolvedValueOnce({ status: 200 });
 
             const onSuccess = jest.fn();
@@ -45,7 +45,7 @@ describe('Password Recovery Flow', () => {
             expect(onError).not.toHaveBeenCalled();
         });
 
-        it('обрабатывает ошибку при отправке', async () => {
+        it('обрабатывает ошибку  при отправке', async () => {
             axios.post.mockRejectedValueOnce(new Error('Server error'));
 
             const onSuccess = jest.fn();
@@ -65,7 +65,7 @@ describe('Password Recovery Flow', () => {
             newPassword: 'newpass123',
         };
 
-        it('успешно сбрасывает пароль', async () => {
+        it('сбрасывает пароль', async () => {
             axios.post.mockResolvedValueOnce({ status: 200 });
 
             const onSuccess = jest.fn();
@@ -78,7 +78,7 @@ describe('Password Recovery Flow', () => {
             expect(onError).not.toHaveBeenCalled();
         });
 
-        it('обрабатывает ошибку если статус ≠ 200', async () => {
+        it('обработка ошибочного статуса', async () => {
             axios.post.mockResolvedValueOnce({ status: 400 });
 
             const onSuccess = jest.fn();
@@ -90,7 +90,7 @@ describe('Password Recovery Flow', () => {
             expect(onError).toHaveBeenCalledWith('Неверный статус ответа');
         });
 
-        it('обрабатывает исключение при сбросе пароля', async () => {
+        it('исключение', async () => {
             axios.post.mockRejectedValueOnce(new Error('Network fail'));
 
             const onSuccess = jest.fn();

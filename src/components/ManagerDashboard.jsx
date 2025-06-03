@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import axiosClient from '../api/AxiosClient';
 import { Table, Typography } from 'antd';
 import '../styles/MentorDashboard.css';
-import ProfileViewModal from './ProfileViewModal'; // ✅ Импорт модалки
+import ProfileViewModal from './ProfileViewModal';
 
 const { Text } = Typography;
 
@@ -13,7 +13,6 @@ const ManagerDashboard = () => {
     const [totalItems, setTotalItems] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
 
-    // ✅ Состояния для ProfileViewModal
     const [selectedUserId, setSelectedUserId] = useState(null);
     const [isProfileViewModalVisible, setIsProfileViewModalVisible] = useState(false);
     const [activeCurrentUserRole, setActiveCurrentUserRole] = useState('');
@@ -74,7 +73,6 @@ const ManagerDashboard = () => {
         fetchSpecialists(1);
     };
 
-    // ✅ Обработчик клика по пользователю
     const handleUserClick = (userId) => {
         setSelectedUserId(userId);
         setIsProfileViewModalVisible(true);
@@ -145,7 +143,6 @@ const ManagerDashboard = () => {
                 />
             </div>
 
-            {/* ✅ Модалка просмотра профиля */}
             <ProfileViewModal
                 visible={isProfileViewModalVisible}
                 onClose={() => setIsProfileViewModalVisible(false)}

@@ -11,10 +11,10 @@
 }
 
 .login-form {
-    max-width: 400px; /* как на регистрации */
-    width: 100%;      /* занимает всю ширину контейнера */
-    margin: 0 auto;   /* центрирование по горизонтали */
-    padding: 0 16px;  /* внутренние отступы */
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
     display: flex;
     flex-direction: column;
 }
@@ -44,7 +44,7 @@
     margin-bottom: 20px;
 }
 
-/* Ссылки */
+
 .login-form .ant-typography-secondary a {
     font-size: 12px;
     color: #96A6BA;
@@ -61,7 +61,7 @@
     gap: 12px;
 }
 
-/* Кнопка */
+
 .submit-btn {
     height: 40px;
     background-color: #56b8ff;
@@ -76,7 +76,7 @@
     background-color: #3a9de5;
 }
 
-/* --- Адаптив под десктоп разрешения --- */
+
 @media (max-width: 1440px) {
     .login-form {
         max-width: 360px;

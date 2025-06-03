@@ -107,7 +107,7 @@ const Registration = () => {
                     ]}
                 >
                     <Checkbox className={styles.checkboxCustom}>
-                        Я ознакомлен(-а) с <a href="/privacy-policy">политикой конфиденциальности</a>
+                        Я ознакомлен(-а) с <a href="/agreement.pdf">политикой конфиденциальности</a>
                     </Checkbox>
                 </Form.Item>
 

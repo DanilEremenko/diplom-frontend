@@ -2,13 +2,13 @@ import React from 'react';
 import { Form, Input, Button, Typography, message } from 'antd';
 import BigFooter from '../components/Bigfooter';
 import axiosClient from '../api/AxiosClient';
-import { useNavigate } from 'react-router-dom'; // импорт
+import { useNavigate } from 'react-router-dom';
 import '../styles/ChangePassword.css';
 
 const { Title } = Typography;
 
 const ChangePassword = () => {
-    const navigate = useNavigate(); // вызов хука
+    const navigate = useNavigate();
     const [messageApi, contextHolder] = message.useMessage();
 
     const onFinish = async (values) => {
@@ -25,10 +25,10 @@ const ChangePassword = () => {
                 newPassword,
             });
 
-            // Проверка успешного ответа
+
             if (response.status === 200) {
                 message.success('Пароль успешно изменён!');
-                navigate('/login'); // редирект
+                navigate('/login');
             } else {
                 message.error('Что-то пошло не так при смене пароля');
             }

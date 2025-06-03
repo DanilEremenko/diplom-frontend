@@ -4,7 +4,6 @@ import tokenService from '../../service/TokenService';
 jest.mock('../../api/AxiosClient');
 jest.mock('../../service/TokenService');
 
-// Логика авторизации, которую тестируем
 const loginUser = async (values, onSuccess, onError) => {
     try {
         const response = await axiosClient.post('/auth/login/', {
@@ -21,14 +20,13 @@ const loginUser = async (values, onSuccess, onError) => {
     }
 };
 
-// Тесты
 describe('loginUser', () => {
     const mockValues = {
         email: 'test@example.com',
         password: 'Qwerty123',
     };
 
-    it('вызывает onSuccess и сохраняет токены при успешной авторизации', async () => {
+    it('вызов onSuccess и сохраняет токены', async () => {
         const mockTokens = {
             accessToken: 'mock-access-token',
             refreshToken: 'mock-refresh-token',
@@ -51,7 +49,7 @@ describe('loginUser', () => {
         expect(onError).not.toHaveBeenCalled();
     });
 
-    it('вызывает onError с сообщением при ошибке авторизации', async () => {
+    it('onError ошибка авторизации', async () => {
         axiosClient.post.mockRejectedValueOnce({
             response: { data: 'Неверный логин или пароль' },
         });

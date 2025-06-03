@@ -1,7 +1,6 @@
-// src/api/axiosClient.js
 import axios from 'axios';
 
-const BASE_URL = 'http://91.105.199.248:8080/api/v1';
+const BASE_URL = '/api/v1';
 const ACCESS_TOKEN_KEY = 'accessToken';
 const REFRESH_TOKEN_KEY = 'refreshToken';
 
@@ -13,7 +12,6 @@ const axiosClient = axios.create({
     timeout: 10000,
 });
 
-// --- Token Helpers ---
 const getAccessToken = () => localStorage.getItem(ACCESS_TOKEN_KEY);
 const getRefreshToken = () => localStorage.getItem(REFRESH_TOKEN_KEY);
 
@@ -27,7 +25,6 @@ const clearTokens = () => {
     localStorage.removeItem(REFRESH_TOKEN_KEY);
 };
 
-// --- Request Interceptor: Add access token ---
 axiosClient.interceptors.request.use(
     (config) => {
         const token = getAccessToken();
@@ -39,7 +36,6 @@ axiosClient.interceptors.request.use(
     (error) => Promise.reject(error)
 );
 
-// --- Response Interceptor: Handle 401 & refresh ---
 axiosClient.interceptors.response.use(
     (response) => response,
     async (error) => {
@@ -61,13 +57,12 @@ axiosClient.interceptors.response.use(
                 const { accessToken, refreshToken } = refreshResponse.data;
                 setTokens({ accessToken, refreshToken });
 
-                // Обновим заголовки и повторим исходный запрос
                 axiosClient.defaults.headers.Authorization = `Bearer ${accessToken}`;
                 originalRequest.headers.Authorization = `Bearer ${accessToken}`;
                 return axiosClient(originalRequest);
             } catch (refreshError) {
                 clearTokens();
-                window.location.href = '/login'; // редирект при неудаче
+                window.location.href = '/login';
                 return Promise.reject(refreshError);
             }
         }
@@ -77,7 +72,6 @@ axiosClient.interceptors.response.use(
     }
 );
 
-// --- Background token refresh every 3 minutes ---
 setInterval(async () => {
     const refreshToken = getRefreshToken();
     if (!refreshToken) return;

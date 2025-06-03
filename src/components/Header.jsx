@@ -3,7 +3,7 @@ import { Avatar } from 'antd';
 import RoleSwitcher from './RoleSwitcher';
 import ProfileModal from './ProfileModal';
 import ChangePhotoPopup from './ChangePhotoPopup';
-import NotificationBell from './NotificationBell'; // подключён работающий колокольчик
+import NotificationBell from './NotificationBell';
 import '../styles/Header.css';
 
 const Header = ({ onRoleChange, onToggleMainContent }) => {
@@ -36,7 +36,7 @@ const Header = ({ onRoleChange, onToggleMainContent }) => {
             <div className="header-container">
                 <RoleSwitcher onRoleChange={onRoleChange} />
                 <div className="header-icons">
-                    <NotificationBell /> {/* 👈 финальный колокольчик здесь */}
+                    <NotificationBell />
                     <Avatar
                         src={profilePhoto || undefined}
                         className="user-avatar"

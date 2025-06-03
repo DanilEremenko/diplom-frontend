@@ -3,7 +3,6 @@ import { Menu } from 'antd';
 import '../styles/SidebarMenu.css';
 
 const SidebarMenu = ({ role = 'SPECIALIST', activeKey = '1', onMenuSelect }) => {
-    // Определяем пункты меню для каждой роли
     const menuItems = {
         SPECIALIST: [
             { key: '1', label: 'Дашборд' },

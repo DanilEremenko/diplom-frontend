@@ -112,7 +112,7 @@ const ProfileViewModal = ({ visible, onClose, activeRole, userId }) => {
         }
 
         const today = new Date();
-        const createdAt = today.toISOString().slice(0, 10); // формат YYYY-MM-DD
+        const createdAt = today.toISOString().slice(0, 10);
 
         axiosClient.post(`/feedback/${userId}/`, {
             message: feedbackText.trim(),

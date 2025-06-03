@@ -1,11 +1,11 @@
-/* Container */
+
 .mentor-content {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-/* Title */
+
 .mentor-title {
     position: absolute;
     top: 60px;
@@ -19,7 +19,7 @@
     color: #313d4c;
 }
 
-/* Tabs */
+
 .mentor-tabs {
     position: absolute;
     top: 210px;
@@ -45,18 +45,18 @@
     text-decoration: none;
 }
 
-/* Table Container */
+
 .mentor-table-container {
     position: absolute;
     top: 301px;
     left: 100px;
     width: 980px;
-    height: auto; /* убрали фиксированную высоту */
-    overflow-x: auto; /* добавили скролл при необходимости */
-    -webkit-overflow-scrolling: touch; /* плавный скролл для мобильных */
+    height: auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
-/* Table */
+
 .mentor-table {
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
@@ -69,12 +69,12 @@
     height: auto !important;
 }
 
-/* Убираем фиксированные ширины колонок, чтобы они адаптировались */
+
 .ant-table-column {
     width: auto !important;
 }
 
-/* Pagination */
+
 .pagination-container {
     position: absolute;
     width: 378px;
@@ -138,9 +138,7 @@
     margin-left: 16px;
 }
 
-/* Медиа-запросы */
 
-/* 1024px и меньше */
 @media (max-width: 1024px) {
     .mentor-title {
         top: 40px;
@@ -168,7 +166,7 @@
     }
 }
 
-/* 768px и меньше */
+
 @media (max-width: 768px) {
     .mentor-title {
         top: 30px;
@@ -208,7 +206,7 @@
     }
 }
 
-/* 480px и меньше */
+
 @media (max-width: 480px) {
     .mentor-title {
         top: 20px;

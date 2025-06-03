@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axiosClient from '../api/AxiosClient';
 import UsersTable from '../components/UserTable';
-import AddUserWithRolesModal from '../components/AddUserModal'; // тот же файл
+import AddUserWithRolesModal from '../components/AddUserModal';
 import '../styles/UsersContent.css';
 import ProfileViewModal from "./ProfileViewModal";
 
@@ -195,7 +195,7 @@ const MethodologistDashboard = () => {
                 visible={isProfileViewModalVisible}
                 onClose={() => setIsProfileViewModalVisible(false)}
                 activeRole={activeCurrentUserRole}
-                userId={selectedUserId} // ✅ Передаём GUID
+                userId={selectedUserId}
             />
         </div>
     );

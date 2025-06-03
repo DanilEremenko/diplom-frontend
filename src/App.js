@@ -8,8 +8,6 @@ import ChangePassword from './pages/ChangePassword';
 import ResetPassword from './pages/ResetPassword';
 
 const App = () => {
-    // 👇 Проверка авторизации (можно усложнить потом)
-    const isAuthenticated = !!localStorage.getItem('token');
 
     return (
         <Router>
@@ -20,12 +18,9 @@ const App = () => {
                 <Route path="/change-password" element={<ChangePassword />} />
                 <Route path="/reset-password" element={<ResetPassword />} />
 
-                {/* 👇 Защищённый маршрут */}
                 <Route
                     path="/dashboard"
-                    element={
-                        isAuthenticated ? <Dashboard /> : <Navigate to="/login" replace />
-                    }
+                    element={<Dashboard/>}
                 />
             </Routes>
         </Router>

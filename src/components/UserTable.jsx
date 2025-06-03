@@ -1,4 +1,3 @@
-// UsersTable.js
 import React from 'react';
 import { Table, Typography } from 'antd';
 import '../styles/UsersContent.css';

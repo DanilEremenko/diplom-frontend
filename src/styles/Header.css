@@ -1,4 +1,4 @@
-/* Контейнер хедера */
+
 .header-container {
     position: relative;
     width: 100%;
@@ -6,18 +6,18 @@
     background: #F4F4F4;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Выравниваем элементы вправо */
+    justify-content: flex-end;
     padding: 0 20px;
 }
 
-/* Блок с переключением ролей */
+
 .role-switcher {
     display: flex;
     gap: 10px;
-    margin-right: auto; /* RoleSwitcher прижимается к левой стороне хедера */
+    margin-right: auto;
 }
 
-/* Иконки ролей */
+
 .role-icon {
     width: 32px;
     height: 32px;
@@ -33,14 +33,14 @@
     opacity: 0.5;
 }
 
-/* Блок с иконками (уведомления и аватар) */
+
 .header-icons {
     display: flex;
     align-items: center;
-    gap: 20px; /* Отступ между колокольчиком и аватаром */
+    gap: 20px;
 }
 
-/* Уведомления */
+
 .notification-bell {
     position: relative;
     cursor: pointer;
@@ -56,7 +56,7 @@
     cursor: pointer;
 }
 
-/* Число уведомлений */
+
 .notification-badge .ant-badge-count {
     position: absolute;
     top: -5px;
@@ -74,7 +74,7 @@
     border: 2px solid #FFFFFF;
 }
 
-/* Аватар пользователя */
+
 .user-avatar {
     width: 32px;
     height: 32px;
@@ -83,7 +83,7 @@
 }
 .notification-container {
     position: absolute;
-    top: 60px; /* под хедером */
+    top: 60px;
     right: 20px;
     z-index: 1000;
 }

@@ -12,12 +12,12 @@
 
 .footer-content {
     width: 100%;
-    max-width: 1156px; /* 1180px - 12px слева - 12px справа */
+    max-width: 1156px;
     display: flex;
-    justify-content: center; /* Центрируем текст */
+    justify-content: center;
     align-items: center;
     padding: 0 12px;
-    gap: 12px; /* Отступ между текстом и ссылкой */
+    gap: 12px;
 }
 
 .big-footer .ant-typography-secondary {

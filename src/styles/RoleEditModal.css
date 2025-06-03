@@ -1,4 +1,4 @@
-/* RoleEditModal.css */
+
 .role-container {
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
     color: black;
 }
 
-/* Стилизация свитча */
+
 .switch {
     position: relative;
     display: inline-block;

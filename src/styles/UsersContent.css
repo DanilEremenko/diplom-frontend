@@ -1,11 +1,11 @@
-/* Контейнер контента */
+
 .users-content {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-/* Заголовок "Пользователи" */
+
 .users-title {
     position: absolute;
     width: 380px;
@@ -20,7 +20,7 @@
     color: #313D4C;
 }
 
-/* Контейнер фильтров */
+
 .filter-container {
     position: absolute;
     width: 680px;
@@ -41,7 +41,6 @@
     color: #313D4C;
 }
 
-/* Поле ввода для фамилии */
 .filter-input {
     position: absolute;
     width: 270px;
@@ -55,7 +54,6 @@
     font-size: 14px;
 }
 
-/* Выпадающий список для роли */
 .filter-role {
     position: absolute;
     width: 180px;
@@ -69,7 +67,7 @@
     font-size: 14px;
 }
 
-/* Кнопка "Найти" */
+
 .filter-button {
     position: absolute;
     width: 180px;
@@ -85,7 +83,6 @@
     cursor: pointer;
 }
 
-/* Кнопка "Добавить пользователя" */
 .add-user-button {
     position: absolute;
     width: 196px;
@@ -103,10 +100,10 @@
     transition: all 300ms ease-out;
 }
 
-/* Таблица */
+
 .users-table {
     position: absolute;
-    width: 850px; /* уменьшено с 980px */
+    width: 850px;
     height: 262px;
     top: 301px;
     left: 100px;
@@ -115,10 +112,10 @@
     background: #FFFFFF;
 }
 
-/* Заголовок таблицы */
+
 .table-header {
     position: absolute;
-    width: 850px; /* уменьшено */
+    width: 850px;
     height: 42px;
     left: 0;
     top: 0;
@@ -148,10 +145,10 @@
 .table-header-cell:nth-child(4) { width: 175px; }
 .table-header-cell:nth-child(5) { width: 150px; }
 
-/* Строки таблицы */
+
 .table-row {
     position: relative;
-    width: 850px; /* уменьшено */
+    width: 850px;
     height: 55px;
     top: 42px;
     border-bottom: 1px solid #EBEBEB;
@@ -178,10 +175,10 @@
 .table-cell:nth-child(4) { width: 175px; }
 .table-cell:nth-child(5) { width: 150px; }
 
-/* Пагинация */
+
 .pagination-container {
     position: absolute;
-    width: 320px; /* уменьшено с 378px */
+    width: 320px;
     height: 32px;
     top: 686px;
     left: 100px;
@@ -239,17 +236,17 @@
     letter-spacing: 0.2px;
     color: #2E2E2E;
     padding: 8px;
-    margin-left: 12px; /* уменьшено */
+    margin-left: 12px;
 }
 
 .ant-spin-container {
-    min-height: 350px; /* или подбери нужное значение */
+    min-height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/* Базовые стили — для экранов от 1920px */
+
 @media (min-width: 1920px) {
     .users-content {
         width: 100%;
@@ -257,7 +254,7 @@
     }
 
     .users-title {
-        left: 150px; /* чуть сдвинул */
+        left: 150px;
         width: 400px;
     }
 
@@ -287,27 +284,25 @@
 
     .users-table {
         left: 150px;
-        width: 900px; /* уменьшено с 1050px */
+        width: 900px;
     }
 
-    /* Подкорректировать ширины ячеек */
     .table-header-cell:nth-child(5),
     .table-cell:nth-child(5) {
-        width: 200px; /* уменьшено с 230px */
+        width: 200px;
     }
 
-    /* Пагинация */
     .pagination-container {
         left: 150px;
-        width: 350px; /* уменьшено с 400px */
+        width: 350px;
     }
     .pagination-jump {
-        margin-left: 16px; /* уменьшено с 20px */
-        width: 140px; /* уменьшено с 160px */
+        margin-left: 16px;
+        width: 140px;
     }
 }
 
-/* От 1440px до 1919px — стандартный десктоп */
+
 @media (min-width: 1440px) and (max-width: 1919px) {
     .users-title {
         left: 120px;
@@ -338,17 +333,16 @@
 
     .users-table {
         left: 120px;
-        width: 850px; /* уменьшено с 980px */
+        width: 850px;
     }
 
-    /* Пагинация */
     .pagination-container {
         left: 120px;
-        width: 320px; /* уменьшено */
+        width: 320px;
     }
 }
 
-/* От 1280px до 1439px — небольшие десктопы / ноуты */
+
 @media (min-width: 1280px) and (max-width: 1439px) {
     .users-title {
         left: 100px;
@@ -385,7 +379,7 @@
 
     .users-table {
         left: 100px;
-        width: 750px; /* уменьшено с 860px */
+        width: 750px;
     }
 
     .table-header-cell:nth-child(5),
@@ -395,11 +389,11 @@
 
     .pagination-container {
         left: 100px;
-        width: 310px; /* немного уменьшено */
+        width: 310px;
     }
 }
 
-/* От 1024px до 1279px — ноутбуки */
+
 @media (min-width: 1024px) and (max-width: 1279px) {
     .users-title {
         left: 80px;
@@ -438,7 +432,7 @@
 
     .users-table {
         left: 80px;
-        width: 670px; /* уменьшено с 740px */
+        width: 670px;
     }
 
     .table-header-cell:nth-child(5),
@@ -448,6 +442,6 @@
 
     .pagination-container {
         left: 80px;
-        width: 280px; /* немного уменьшено */
+        width: 280px;
     }
 }

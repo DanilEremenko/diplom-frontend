@@ -2,7 +2,6 @@ import axiosClient from '../../api/AxiosClient';
 
 jest.mock('../../api/AxiosClient');
 
-// Функция, которую тестируем (вынесена из onFinish)
 const changePassword = async ({ oldPassword, newPassword, confirmPassword }, onSuccess, onError) => {
     if (newPassword !== confirmPassword) {
         onError('Пароли не совпадают!');
@@ -26,7 +25,6 @@ const changePassword = async ({ oldPassword, newPassword, confirmPassword }, onS
     }
 };
 
-// Тесты
 describe('changePassword', () => {
     const baseValues = {
         oldPassword: 'OldPass123',
@@ -34,7 +32,7 @@ describe('changePassword', () => {
         confirmPassword: 'NewPass456',
     };
 
-    it('успешно меняет пароль и вызывает onSuccess', async () => {
+    it('по итогу вызов onSuccess', async () => {
         axiosClient.post.mockResolvedValueOnce({ status: 200 });
 
         const onSuccess = jest.fn();
@@ -51,7 +49,7 @@ describe('changePassword', () => {
         expect(onError).not.toHaveBeenCalled();
     });
 
-    it('отклоняет, если пароли не совпадают', async () => {
+    it('пароли не совпали', async () => {
         const onSuccess = jest.fn();
         const onError = jest.fn();
 
@@ -65,7 +63,7 @@ describe('changePassword', () => {
         expect(onError).toHaveBeenCalledWith('Пароли не совпадают!');
     });
 
-    it('вызывает onError при ошибке запроса', async () => {
+    it('вызывает onError', async () => {
         axiosClient.post.mockRejectedValueOnce(new Error('Network error'));
 
         const onSuccess = jest.fn();
@@ -77,7 +75,7 @@ describe('changePassword', () => {
         expect(onError).toHaveBeenCalledWith('Ошибка при смене пароля');
     });
 
-    it('вызывает onError если статус ответа не 200', async () => {
+    it('вызывает onError ', async () => {
         axiosClient.post.mockResolvedValueOnce({ status: 400 });
 
         const onSuccess = jest.fn();

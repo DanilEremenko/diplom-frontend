@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Input, Button, Typography, message } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import SidebarLayout from '../components/SidebarLayout';
-import axios from '../api/AxiosClient'; // Импорт твоего axios-клиента
+import axios from '../api/AxiosClient';
 import '../styles/ForgotPassword.css';
 
 const { Title, Text } = Typography;

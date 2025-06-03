@@ -2,8 +2,8 @@ import React from 'react';
 import { Form, Input, Button, Typography, message } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import SidebarLayout from '../components/SidebarLayout';
-import axios from '../api/AxiosClient'; // Твой axios клиент
-import '../styles/ResetPassword.css'; // Отдельный CSS файл
+import axios from '../api/AxiosClient';
+import styles from '../styles/ResetPassword.module.scss';
 
 const { Title, Text } = Typography;
 
@@ -26,24 +26,23 @@ const ResetPassword = () => {
         } catch (error) {
             messageApi.error(error.response?.data?.errors[0] || 'Ошибка при смене пароля');
             console.error(error);
-            message.error('Ошибка при смене пароля');
         }
     };
 
     return (
         <SidebarLayout>
             {contextHolder}
-            <div className="form-header">
-                <Title level={1} className="logo-text">BE BETTER</Title>
+            <div className={styles.formHeader}>
+                <Title level={1} className={styles.logoText}>BE BETTER</Title>
             </div>
             <Form
                 name="reset-password"
                 layout="vertical"
                 onFinish={onFinish}
                 autoComplete="off"
-                className="reset-password-form"
+                className={styles.resetForm}
             >
-                <div className="description">
+                <div className={styles.description}>
                     <Text type="secondary">
                         Введите логин, секретный код из уведомления и новый пароль.
                     </Text>
@@ -53,25 +52,25 @@ const ResetPassword = () => {
                     name="login"
                     rules={[{ required: true, message: 'Пожалуйста, введите логин!' }]}
                 >
-                    <Input placeholder="Логин" className="input-custom-login" />
+                    <Input placeholder="Логин" className={styles.input} />
                 </Form.Item>
 
                 <Form.Item
                     name="secret"
                     rules={[{ required: true, message: 'Введите секретный код!' }]}
                 >
-                    <Input placeholder="Секретный код" className="input-custom" />
+                    <Input placeholder="Секретный код" className={styles.input} />
                 </Form.Item>
 
                 <Form.Item
                     name="newPassword"
                     rules={[{ required: true, message: 'Введите новый пароль!' }]}
                 >
-                    <Input.Password placeholder="Новый пароль" className="input-custom" />
+                    <Input.Password placeholder="Новый пароль" className={styles.input} />
                 </Form.Item>
 
                 <Form.Item>
-                    <Button type="primary" htmlType="submit" block className="submit-btn">
+                    <Button type="primary" htmlType="submit" className={styles.submitBtn}>
                         СМЕНИТЬ ПАРОЛЬ
                     </Button>
                 </Form.Item>
