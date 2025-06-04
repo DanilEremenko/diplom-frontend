@@ -87,3 +87,59 @@
     right: 20px;
     z-index: 1000;
 }
+
+@media screen and (max-height: 840px) {
+    .header-container {
+        height: 72px;
+        padding: 0 12px;
+    }
+    .role-icon,
+    .notification-icon,
+    .user-avatar {
+        width: 28px;
+        height: 28px;
+    }
+    .notification-badge .ant-badge-count {
+        width: 14px;
+        height: 14px;
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-height: 528px) {
+    .header-container {
+        height: 56px;
+        padding: 0 8px;
+    }
+    .role-icon,
+    .notification-icon,
+    .user-avatar {
+        width: 24px;
+        height: 24px;
+    }
+    .notification-badge .ant-badge-count {
+        width: 12px;
+        height: 12px;
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .header-container { padding: 0 16px; }
+    .notification-icon { font-size: 22px; }
+}
+
+@media (max-width: 1024px) {
+    .header-container { padding: 0 12px; }
+    .role-switcher { gap: 8px; }
+    .header-icons { gap: 16px; }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 8px;
+        justify-content: space-between;
+    }
+    .role-switcher { gap: 6px; }
+    .header-icons  { gap: 12px; }
+}

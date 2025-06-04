@@ -41,7 +41,7 @@ const RoleSwitcher = ({ onRoleChange }) => {
         };
 
         fetchCurrentUser();
-    }, []); // onRoleChange специально не добавляется
+    }, []);
 
     const handleRoleChange = async (newRole) => {
         if (!availableRoles.includes(newRole)) return;

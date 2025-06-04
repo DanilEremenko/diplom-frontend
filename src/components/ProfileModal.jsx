@@ -16,7 +16,7 @@ const ProfileModal = ({ visible, onClose, onOpenChangePhoto, profilePhoto, onPho
         login: '',
         dateOfBirth: '',
         workExperience: '',
-        photoGuid: null,
+        photoGuid: '',
     });
 
     const [localPhotoUrl, setLocalPhotoUrl] = useState(null);
@@ -36,7 +36,7 @@ const ProfileModal = ({ visible, onClose, onOpenChangePhoto, profilePhoto, onPho
                     login: data.login || '',
                     dateOfBirth: data.dateOfBirth ? data.dateOfBirth.split('-').reverse().join('.') : '',
                     workExperience: data.workExperience || '',
-                    photoGuid: data.photo?.guid || null,
+                    photoGuid: data.photo?.guid || '',
                 });
 
                 setUserInitials(data.firstName, data.lastName);

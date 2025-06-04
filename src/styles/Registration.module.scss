@@ -60,7 +60,6 @@
   color: #313d4c;
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
   .formHeader {
     text-align: center;
@@ -140,4 +139,147 @@
   .checkboxCustom {
     font-size: 11px;
   }
+}
+
+
+@media (max-width: 1440px) {
+  .registrationForm {
+    max-width: 360px;
+    padding: 0 14px;
+  }
+  .logoText {
+    font-size: 24px;
+  }
+  .subtitle {
+    font-size: 13px;
+  }
+  .inputCustom {
+    height: 38px !important;
+    font-size: 13px !important;
+  }
+  .submitBtn {
+    height: 38px;
+    font-size: 12px;
+  }
+  .checkboxCustom {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .registrationForm {
+    max-width: 320px;
+    padding: 0 12px;
+  }
+  .logoText {
+    font-size: 22px;
+  }
+  .subtitle {
+    font-size: 12px;
+  }
+  .inputCustom {
+    height: 36px !important;
+    font-size: 12px !important;
+  }
+  .submitBtn {
+    height: 36px;
+    font-size: 11px;
+  }
+  .checkboxCustom {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .registrationForm {
+    max-width: 280px;
+    padding: 0 10px;
+  }
+  .logoText {
+    font-size: 20px;
+  }
+  .subtitle {
+    font-size: 11px;
+  }
+  .inputCustom {
+    height: 34px !important;
+    font-size: 11px !important;
+  }
+  .submitBtn {
+    height: 34px;
+    font-size: 10px;
+  }
+  .checkboxCustom {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .registrationForm {
+    max-width: 240px;
+    padding: 0 8px;
+  }
+  .logoText {
+    font-size: 18px;
+  }
+  .subtitle {
+    font-size: 10px;
+  }
+  .inputCustom {
+    height: 32px !important;
+    font-size: 10px !important;
+  }
+  .submitBtn {
+    height: 32px;
+    font-size: 9px;
+  }
+  .checkboxCustom {
+    font-size: 9px;
+  }
+}
+@media screen and (max-height: 840px) {
+
+  .registrationForm {
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    .formHeader {
+      margin-bottom: 8px;
+      .logoText { font-size: 22px; }
+      .subtitle { font-size: 12px; }
+    }
+
+    .ant-form-item {
+      margin-bottom: 12px;
+    }
+
+    .inputCustom { height: 32px !important; }
+    .submitBtn { height: 32px; font-size: 11px; }
+    .checkboxCustom { font-size: 10px; margin-bottom: 12px; }
+  }
+
+
+}
+
+
+@media screen and (max-height: 528px) {
+  .registrationForm {
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    .formHeader {
+      margin-bottom: 2px;
+      .logoText { font-size: 16px; }
+      .subtitle { font-size: 8px; }
+    }
+
+    .ant-form-item {
+      margin-bottom: 6px;
+    }
+
+    .inputCustom { height: 25px !important; font-size: 10px !important; }
+    .submitBtn { height: 25px; font-size: 10px; }
+    .checkboxCustom { font-size: 9px; margin-bottom: 8px; }
+  }
+
 }

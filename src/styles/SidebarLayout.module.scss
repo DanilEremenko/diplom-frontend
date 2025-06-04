@@ -39,7 +39,7 @@
     flex-direction: column;
     justify-content: flex-start;
     padding: 0 4px;
-    overflow: hidden; /* не даем расти и не скроллим */
+    overflow: hidden;
 }
 
 .sidebarFooter {
@@ -115,5 +115,63 @@
 
     .logoImg {
         width: 70px;
+    }
+}
+
+/* 1600px */
+@media (max-width: 1600px) {
+    .customSidebar { width: 340px; }
+}
+
+/* 1440px */
+@media (max-width: 1440px) {
+    .customSidebar { width: 300px; }
+    .logoImg { width: 80px; }
+}
+
+/* 1366px */
+@media (max-width: 1366px) {
+    .customSidebar { width: 280px; }
+    .logoImg { width: 70px; }
+}
+
+/* планшеты 1024px */
+@media (max-width: 1024px) {
+    .customSidebar { width: 240px; padding: 8px; }
+    .logoImg { width: 60px; }
+}
+
+/* мобилки */
+@media (max-width: 768px) {
+    .layout { flex-direction: column; }
+    .customSidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+    }
+    .contentWrapper {
+        height: auto;
+        background-image: none;
+    }
+}
+
+@media screen and (max-height: 840px) {
+
+    .customSidebar {
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+        .sidebarLogo { margin-bottom: 8px; }
+        .sidebarFooter { padding-top: 4px; }
+    }
+}
+
+@media screen and (max-height: 528px) {
+    .customSidebar {
+        padding: 4px;
+
+        .sidebarLogo { margin-bottom: 4px; }
+        .logoImg { width: 60px; }
+        .sidebarFooter { padding-top: 2px; }
     }
 }

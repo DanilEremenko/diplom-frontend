@@ -19,7 +19,7 @@ const UsersTable = ({ users, loading, currentPage, totalItems, onPageChange, onU
             render: (text, record) => (
                 <Text
                     style={{ color: '#1890ff', cursor: 'pointer' }}
-                    onClick={() => onUserClick(record.id)} // 🔑 Передаём id
+                    onClick={() => onUserClick(record.id)}
                 >
                     {text}
                 </Text>

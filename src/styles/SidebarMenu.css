@@ -7,7 +7,6 @@
     background: transparent;
 }
 
-
 .ant-menu {
     background: transparent !important;
     border: 0 !important;
@@ -46,4 +45,29 @@
     width: 4px;
     height: 40px;
     background: #56B8FF;
+}
+
+@media (max-width: 1048px) and (min-width: 944px) {
+    .sidebar-menu {
+        width: 250px;
+        top: 200px;
+        left: 20px;
+    }
+    .menu-item-custom {
+        width: 210px !important;
+        margin-left: 20px !important;
+    }
+}
+
+@media (max-width: 943px) {
+    .sidebar-menu {
+        width: 200px;
+        top: 180px;
+        left: 10px;
+    }
+    .menu-item-custom {
+        width: 160px !important;
+        margin-left: 10px !important;
+        font-size: 13px !important;
+    }
 }
